@@ -14,20 +14,17 @@ int main() {
 }
 
 void nivelNovato() {
-    // Tabuleiro 5x5
-    int tabuleiro[5][5];
+    int tabuleiro[5][5] = {0};
 
-    // Navio 1: vertical 
-    int x1 = 0, y1 = 1;
-    for (int i = 0; i < 3; i++) {
-        tabuleiro[x1 + i][y1] = 3;
-        printf("Navio Vertical em (%d, %d)\n", x1 + i, y1);
+    // Navio vertical
+    for (int i = 0; i < 4; i++) {
+        tabuleiro[i][1] = 3;
+        printf("Navio Vertical em (%d, 1)\n", i);
     }
 
-    // Navio 2: horizontal
-    int x2 = 3, y2 = 0;
+    // Navio horizontal
     for (int i = 0; i < 4; i++) {
-        tabuleiro[x2][y2 + i] = 3;
-        printf("Navio Horizontal em (%d, %d)\n", x2, y2 + i);
+        tabuleiro[3][i] = 3;
+        printf("Navio Horizontal em (3, %d)\n", i);
     }
 }
